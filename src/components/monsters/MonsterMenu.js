@@ -8,8 +8,9 @@ export class MonsterMenu extends React.Component {
         return (
             <div className="MonsterMenu">
                 Monster Menu
-                <MonsterSearchBar />
-			</div>
+                <MonsterSearchBar addMonsterFunction={this.props.addMonsterFunction}
+                    monsterNames={this.props.monsterNames} />
+            </div>
         );
     }
 }

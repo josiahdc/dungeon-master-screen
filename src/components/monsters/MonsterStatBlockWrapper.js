@@ -16,7 +16,8 @@ export class MonsterStatBlockWrapper extends React.Component {
     render() {
         return (
             <div className="MonsterStatBlockWrapper">
-                <MonsterStatBlock monster={this.props.monster} />
+                <MonsterStatBlock monster={this.props.monster}
+                    monsterList={this.props.monsterList} />
                 <button onClick={this.handleRemoveButtonClick}>
                     Remove
                 </button>

@@ -9,7 +9,8 @@ export class MonsterStatBlockRegion extends React.Component {
             <div className="MonsterStatBlockRegion">
                 {this.props.activeMonsters.map((monsterName) =>
                     <MonsterStatBlockWrapper monster={monsterName} key={monsterName}
-                        removeMonsterFunction={this.props.removeMonsterFunction} />
+                        removeMonsterFunction={this.props.removeMonsterFunction}
+                        monsterList={this.props.monsterList} />
                 )}
             </div>
         );

@@ -1,13 +1,12 @@
 import React from 'react';
 import './MonsterStatBlock.css';
-const monstersList = require('./../../monsterstats/monsters.json')
 
 
 export class MonsterStatBlock extends React.Component {
     constructor(props) {
         super(props);
-        if (props.monster in monstersList) {
-            this.state = { monsterStats: monstersList[props.monster] };
+        if (props.monster in this.props.monsterList) {
+            this.state = { monsterStats: this.props.monsterList[props.monster] };
         } else {
             this.state = { monsterStats: null };
         }

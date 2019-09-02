@@ -2,6 +2,8 @@ import React from 'react';
 import './MonsterPage.css';
 import { MonsterMenu } from './MonsterMenu';
 import { MonsterStatBlockRegion } from './MonsterStatBlockRegion';
+const monsterNames = require('./../../monsterstats/monsterNames.json')
+const monsterList = require('./../../monsterstats/monsters.json')
 
 
 export class MonsterPage extends React.Component {
@@ -14,7 +16,8 @@ export class MonsterPage extends React.Component {
 
     addActive(monsterName) {
         if (this.state.activeMonsters.indexOf(monsterName) === -1) {
-            this.state.activeMonsters.append(monsterName);
+            let newActiveMonsters = this.state.activeMonsters.concat([monsterName]);
+            this.setState({activeMonsters: newActiveMonsters});
         }
     }
 
@@ -28,9 +31,11 @@ export class MonsterPage extends React.Component {
     render() {
         return (
             <div className="MonsterPage">
-                <MonsterMenu addMonsterFunction={this.addActive} />
+                <MonsterMenu addMonsterFunction={this.addActive}
+                    monsterNames={monsterNames} />
                 <MonsterStatBlockRegion activeMonsters={this.state.activeMonsters}
-                    removeMonsterFunction={this.removeActive} />
+                    removeMonsterFunction={this.removeActive}
+                    monsterList={monsterList} />
             </div>
         );
     }
