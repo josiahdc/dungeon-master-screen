@@ -1,3 +1,9 @@
-.MonsterMenu {
-    border-style: solid;    
+.gold-border {
+    background-color: gold;
+    padding: 5px;
+}
+
+.divider {
+    background-color: crimson;
+    padding: 5px;
 }
