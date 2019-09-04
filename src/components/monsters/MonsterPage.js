@@ -2,6 +2,7 @@ import React from 'react';
 import './MonsterPage.css';
 import { MonsterMenu } from './MonsterMenu';
 import { MonsterStatBlockRegion } from './MonsterStatBlockRegion';
+import Box from '@material-ui/core/Box';
 const monsterNames = require('./../../monsterstats/monsterNames.json')
 const monsterList = require('./../../monsterstats/monsters.json')
 
@@ -30,13 +31,13 @@ export class MonsterPage extends React.Component {
 
     render() {
         return (
-            <div className="MonsterPage">
+            <Box className="MonsterPage">
                 <MonsterMenu addMonsterFunction={this.addActive}
                     monsterNames={monsterNames} />
                 <MonsterStatBlockRegion activeMonsters={this.state.activeMonsters}
                     removeMonsterFunction={this.removeActive}
                     monsterList={monsterList} />
-            </div>
+            </Box>
         );
     }
 }

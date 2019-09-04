@@ -1,5 +1,8 @@
 # Dungeon Master Screen
 An interactive Dungeon Master Screen
 
-## This project uses the following libraries
-* [react-autosuggest](https://www.npmjs.com/package/react-autosuggest)
+### Special thanks to the following resources:
+* [React Autosuggest](https://www.npmjs.com/package/react-autosuggest)
+* [Material UI](https://material-ui.com/)
+* [Solbera's Fonts](https://github.com/jonathonf/solbera-dnd-fonts)
+* [Toptal Patterns](https://www.toptal.com/designers/subtlepatterns/)

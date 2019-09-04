@@ -1,6 +1,8 @@
 import React from 'react';
 import Autosuggest from 'react-autosuggest';
 import './MonsterSearchBar.css';
+import Box from '@material-ui/core/Box';
+
 
 
 export class MonsterSearchBar extends React.Component {
@@ -22,10 +24,10 @@ export class MonsterSearchBar extends React.Component {
     trimSuggestions(value) {
         let input = value.trim().toLowerCase();
         let trimmedList = this.props.monsterNames.filter((monster) => {
-            let trimmedMonsterName = monster.name.toLowerCase().slice(0, input.length);
-            return trimmedMonsterName === input;
+            let lowerCaseMonsterName = monster.name.toLowerCase();
+            return lowerCaseMonsterName.includes(input);
         });
-        return trimmedList
+        return trimmedList.slice(0, 10);
     }
 
     onSuggestionsFetchRequested(value) {
@@ -64,7 +66,7 @@ export class MonsterSearchBar extends React.Component {
         }
 
         return (
-            <div className="MonsterSearchBar">
+            <Box className="MonsterSearchBar">
                 <Autosuggest
                     suggestions={this.state.suggestions}
                     onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
@@ -75,7 +77,7 @@ export class MonsterSearchBar extends React.Component {
                     onSuggestionSelected={this.onSuggestionSelected}
                     highlightFirstSuggestion={true}
                 />
-            </div>
+            </Box>
         );
     }
 }

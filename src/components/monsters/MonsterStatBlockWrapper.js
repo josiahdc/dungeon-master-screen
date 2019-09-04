@@ -1,6 +1,7 @@
 import React from 'react';
 import './MonsterStatBlockWrapper.css';
 import { MonsterStatBlock } from './MonsterStatBlock';
+import Box from '@material-ui/core/Box';
 
 
 export class MonsterStatBlockWrapper extends React.Component {
@@ -15,13 +16,19 @@ export class MonsterStatBlockWrapper extends React.Component {
 
     render() {
         return (
-            <div className="MonsterStatBlockWrapper">
+            <Box className="MonsterStatBlockWrapper">
+                <Box className="gold-border">
+                    <Box className="color-overlay"></Box>
+                </Box>
                 <MonsterStatBlock monster={this.props.monster}
                     monsterList={this.props.monsterList} />
+                <Box className="gold-border">
+                    <Box className="color-overlay"></Box>
+                </Box>
                 <button onClick={this.handleRemoveButtonClick}>
                     Remove
                 </button>
-            </div>
+            </Box>
         );
     }
 }

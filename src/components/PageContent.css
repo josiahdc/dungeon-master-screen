@@ -1,3 +1,5 @@
 .PageContent {
-    height: 100%;
+    height: 110%;
+    /* Background pattern from Toptal Patterns */
+    background: url("../images/skulls.png");
 }

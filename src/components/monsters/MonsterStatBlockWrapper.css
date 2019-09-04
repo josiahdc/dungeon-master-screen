@@ -1,5 +1,13 @@
 .MonsterStatBlockWrapper {
-    border-style: solid;
     width: 30%;
     float: left;
+    margin: 1%;
+}
+
+.gold-border {
+    /* Background pattern from Toptal Patterns */
+    background: radial-gradient(circle, rgba(244,239,0,0.5816701680672269) 0%, rgba(255,217,6,0.7721463585434174)  100%),
+    url("../../images/felt.png");
+    padding: 5px;
+    border: 0.1px solid rgb(71, 67, 9);
 }
