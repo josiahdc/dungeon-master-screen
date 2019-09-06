@@ -7,3 +7,4 @@ This project is intended to help Dungeon Masters track and quickly reference ses
 * [Solbera's Fonts](https://github.com/jonathonf/solbera-dnd-fonts)
 * [Toptal Patterns](https://www.toptal.com/designers/subtlepatterns/)
 * [React Grid Layout](https://github.com/STRML/react-grid-layout#features)
+* [JS Cookie](https://www.npmjs.com/package/js-cookie)
