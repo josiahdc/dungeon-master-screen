@@ -1,0 +1,11 @@
+.ability-score-identifier {
+    font-family: "Scaly Sans Bold", serif;
+    color: rgb(104, 21, 34);
+    text-align: center;
+}
+
+.ability-score {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+}

@@ -1,0 +1,24 @@
+.MonsterStatBlockRegion {
+    padding: 1%;
+}
+
+.remove-button {
+    text-align: end;
+    vertical-align: top;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.remove-button::after {
+    content: "";
+    position: absolute;
+    right: 3px;
+    top: 5px;
+    width: 10px;
+    height: 5px;
+    border-top: 2px solid rgba(0, 0, 0, 0.4);
+}
