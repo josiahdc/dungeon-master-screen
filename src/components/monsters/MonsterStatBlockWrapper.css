@@ -1,13 +1,17 @@
-.MonsterStatBlockWrapper {
-    width: 30%;
-    float: left;
-    margin: 1%;
-}
-
 .gold-border {
     /* Background pattern from Toptal Patterns */
     background: radial-gradient(circle, rgba(244,239,0,0.5816701680672269) 0%, rgba(255,217,6,0.7721463585434174)  100%),
     url("../../images/felt.png");
-    padding: 5px;
+    height: 2%;
     border: 0.1px solid rgb(71, 67, 9);
+}
+
+.monster-card {
+    -webkit-box-shadow: 6px 6px 19px 3px rgba(0,0,0,0.34);
+    -moz-box-shadow: 6px 6px 19px 3px rgba(0,0,0,0.34);
+    box-shadow: 6px 6px 19px 3px rgba(0,0,0,0.34);
+}
+
+.MonsterStatBlockWrapper {
+    height: 100%;
 }
