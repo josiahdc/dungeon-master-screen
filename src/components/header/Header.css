@@ -1,0 +1,13 @@
+.Header {
+    /* Background pattern from Toptal Patterns */
+    background: url("../../images/dark-paths.png");
+    height: 10%;
+}
+
+.title {
+    font-family: "Scaly Sans Caps Bold", serif;
+    font-size: 4vh;
+    height: 100%;
+    padding: 1.5%;
+    color: whitesmoke;
+}
