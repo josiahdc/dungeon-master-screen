@@ -3,6 +3,13 @@ html, body, #root {
 }
 
 @font-face {
+    font-family: "Scaly Sans Caps Bold";
+    src: url("./fonts/ScalySansCapsBold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
     font-family: "Scaly Sans Italic";
     src: url("fonts/ScalySansItalic.otf") format("opentype");
     font-weight: normal;

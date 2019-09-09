@@ -88,3 +88,4 @@ yarn-error.log*
 
 # monster stats
 src/monsterstats/
+src/spells/
