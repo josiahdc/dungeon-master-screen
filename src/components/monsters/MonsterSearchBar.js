@@ -4,7 +4,6 @@ import './MonsterSearchBar.css';
 import Box from '@material-ui/core/Box';
 
 
-
 export class MonsterSearchBar extends React.Component {
     constructor(props) {
         super(props);
