@@ -6,7 +6,7 @@ import Box from '@material-ui/core/Box';
 export class MonsterDivider extends React.Component {
     render() {
         return (
-            <Box className="Divider">
+            <Box className="divider">
                 <svg viewBox="0 0 100 1">
                     <polygon points="0,0 0,1 100,0.5" />
                 </svg>

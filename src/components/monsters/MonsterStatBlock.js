@@ -28,7 +28,7 @@ export class MonsterStatBlock extends React.Component {
     render() {
         if (this.state.monsterStats !== null) {
             return (
-                <Box className="MonsterStatBlock">
+                <Box className="monster-stat-block">
                     <Box className="name">
                         {this.props.monster}
                     </Box>

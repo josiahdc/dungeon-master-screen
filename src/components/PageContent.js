@@ -7,9 +7,9 @@ import Box from '@material-ui/core/Box';
 export class PageContent extends React.Component {
     render() {
         return (
-            <Box className="PageContent">
+            <Box className="page-content">
                 <MonsterPage />
-			</Box>
+            </Box>
         );
     }
 }

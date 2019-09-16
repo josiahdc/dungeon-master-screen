@@ -1,9 +1,14 @@
 import React from 'react';
 import './MonsterPage.css';
 import { MonsterMenu } from './MonsterMenu';
-import { MonsterStatBlockRegion } from './MonsterStatBlockRegion';
+import { MonsterStatBlockWrapper } from './MonsterStatBlockWrapper';
 import Cookies from 'js-cookie';
 import Box from '@material-ui/core/Box';
+import RGL, { WidthProvider } from "react-grid-layout";
+import "react-grid-layout/css/styles.css";
+
+
+const ReactGridLayout = WidthProvider(RGL);
 const monsterNames = require('./../../monsterstats/monsterNames.json')
 const monsterList = require('./../../monsterstats/monsters.json')
 
@@ -13,7 +18,7 @@ export class MonsterPage extends React.Component {
         super(props);
         let activeMonsterCookie = Cookies.get("activeMonsters");
         let activeMonsters = [];
-        let layout = [];
+        let layout = [{ i: 'search-bar', x: 0, y: 0, w: 30, h: 2, static: true }];
         if (activeMonsterCookie !== undefined) {
             activeMonsters = JSON.parse(activeMonsterCookie);
             layout = JSON.parse(Cookies.get("layout"));
@@ -70,14 +75,22 @@ export class MonsterPage extends React.Component {
 
     render() {
         return (
-            <Box className="MonsterPage">
-                <MonsterMenu addMonsterFunction={this.addActive}
-                    monsterNames={monsterNames} />
-                <MonsterStatBlockRegion activeMonsters={this.state.activeMonsters}
-                    removeMonsterFunction={this.removeActive}
-                    monsterList={monsterList}
-                    monsterlayout={this.state.layout}
-                    layoutChange={this.onLayoutChange} />
+            <Box className="monster-page">
+                <ReactGridLayout className="layout" layout={this.state.layout} cols={90} rowHeight={10}
+                    onLayoutChange={this.onLayoutChange}>
+                    <div key="search-bar" className="search-bar">
+                        <MonsterMenu addMonsterFunction={this.addActive}
+                            monsterNames={monsterNames} />
+                    </div>
+                    {this.state.activeMonsters.map((monsterName) =>
+                        <div key={monsterName}>
+                            <MonsterStatBlockWrapper id={monsterName} monster={monsterName} key={monsterName}
+                                monsterList={monsterList} />
+                            <span className="remove-button"
+                                onClick={() => this.removeActive(monsterName)}></span>
+                        </div>
+                    )}
+                </ReactGridLayout>
             </Box>
         );
     }

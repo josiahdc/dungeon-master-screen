@@ -4,7 +4,6 @@ import './MonsterSearchBar.css';
 import Box from '@material-ui/core/Box';
 
 
-
 export class MonsterSearchBar extends React.Component {
     constructor(props) {
         super(props);
@@ -54,9 +53,9 @@ export class MonsterSearchBar extends React.Component {
         this.setState({ value: newValue })
     }
 
-    onSuggestionSelected(event, {suggestion}) {
+    onSuggestionSelected(event, { suggestion }) {
         this.props.addMonsterFunction(suggestion.name);
-        this.setState({value: ""});
+        this.setState({ value: "" });
     }
 
     render() {
@@ -66,7 +65,7 @@ export class MonsterSearchBar extends React.Component {
         }
 
         return (
-            <Box className="MonsterSearchBar">
+            <Box className="monster-search-bar">
                 <Autosuggest
                     suggestions={this.state.suggestions}
                     onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}

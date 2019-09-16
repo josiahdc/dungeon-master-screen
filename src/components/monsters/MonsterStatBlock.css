@@ -1,17 +1,17 @@
-.MonsterStatBlock {
+.monster-stat-block {
     font-size: 2vh;
+    height: 96%;
     padding-left: 5px;
     padding-right: 5px;
     /* Background pattern from Toptal Patterns */
-    background: linear-gradient(0deg, rgba(252,250,226,0.4164040616246498) 49%, rgba(232,216,148,0.39119397759103647)),
-    url("../../images/natural_paper.png");
+    background: linear-gradient(0deg, rgba(252, 250, 226, 0.4164040616246498) 49%, rgba(232, 216, 148, 0.39119397759103647)), url("../../images/natural_paper.png");
     overflow: auto;
 }
 
 .name {
     font-size: 4vh;
     font-family: "Scaly Sans Bold", serif;
-    color:rgb(104, 21, 34);
+    color: rgb(104, 21, 34);
 }
 
 .category {
@@ -21,8 +21,4 @@
 
 .monster-card {
     height: 100%;
-}
-
-.MonsterStatBlock {
-    height: 96%;
 }
