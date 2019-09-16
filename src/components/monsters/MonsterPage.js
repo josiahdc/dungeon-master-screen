@@ -18,7 +18,7 @@ export class MonsterPage extends React.Component {
         super(props);
         let activeMonsterCookie = Cookies.get("activeMonsters");
         let activeMonsters = [];
-        let layout = [{i: 'search-bar', x: 0, y: 0, w: 30, h: 1, static: true}];
+        let layout = [{ i: 'search-bar', x: 0, y: 0, w: 30, h: 2, static: true }];
         if (activeMonsterCookie !== undefined) {
             activeMonsters = JSON.parse(activeMonsterCookie);
             layout = JSON.parse(Cookies.get("layout"));
@@ -75,15 +75,13 @@ export class MonsterPage extends React.Component {
 
     render() {
         return (
-            <Box className="MonsterPage">
+            <Box className="monster-page">
                 <ReactGridLayout className="layout" layout={this.state.layout} cols={90} rowHeight={10}
                     onLayoutChange={this.onLayoutChange}>
                     <div key="search-bar" className="search-bar">
                         <MonsterMenu addMonsterFunction={this.addActive}
                             monsterNames={monsterNames} />
                     </div>
-                    <MonsterMenu addMonsterFunction={this.addActive}
-                        monsterNames={monsterNames} />
                     {this.state.activeMonsters.map((monsterName) =>
                         <div key={monsterName}>
                             <MonsterStatBlockWrapper id={monsterName} monster={monsterName} key={monsterName}
