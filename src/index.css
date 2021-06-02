@@ -1,0 +1,37 @@
+html, body, #root {
+    height: 100%;
+}
+
+@font-face {
+    font-family: "Scaly Sans Caps Bold";
+    src: url("./fonts/ScalySansCapsBold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Scaly Sans Italic";
+    src: url("fonts/ScalySansItalic.otf") format("opentype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Scaly Sans";
+    src: url("fonts/ScalySans.otf") format("opentype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Scaly Sans Bold";
+    src: url("fonts/ScalySansBold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Scaly Sans Bold Italic";
+    src: url("fonts/ScalySansBoldItalic.otf") format("opentype");
+    font-weight: bold;
+    font-style: italic;
+}

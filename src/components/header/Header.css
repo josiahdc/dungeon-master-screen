@@ -1,0 +1,13 @@
+.Header {
+    /* Background pattern from Toptal Patterns */
+    background: url("../../images/footer_lodyas.png");
+    height: 7%;
+}
+
+.title {
+    font-family: "Scaly Sans Caps Bold", serif;
+    font-size: 4vh;
+    height: 100%;
+    padding: 0.5%;
+    color: whitesmoke;
+}
